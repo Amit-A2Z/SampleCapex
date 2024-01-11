@@ -24,6 +24,7 @@ modules:
     requires:
       - name: SampleCapex-auth
       - name: SampleCapex-db
+      - name: SampleCapex-destination
 
   - name: SampleCapex
     type: approuter.nodejs
@@ -108,3 +109,8 @@ resources:
     parameters:
       service: service-manager
       service-plan: container
+  - name: SampleCapex-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite

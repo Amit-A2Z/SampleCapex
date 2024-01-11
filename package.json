@@ -23,7 +23,8 @@
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7.5.1",
-    "@sap/ux-specification": "^1.120.1"
+    "@sap/ux-specification": "^1.120.1",
+    "@cap-js/cds-typer": "^0.15.0"
   },
   "scripts": {
     "start": "cds-serve",
@@ -44,7 +45,8 @@
       "auth": {
         "kind": "xsuaa"
       },
-      "multitenancy": true
+      "multitenancy": true,
+      "destinations": true
     },
     "features": {
       "fetch_csrf": true
@@ -54,5 +56,8 @@
   "lcap": true,
   "sapux": [
     "app/SampleCapex.CapexReport"
-  ]
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
 }
