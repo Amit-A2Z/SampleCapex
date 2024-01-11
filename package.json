@@ -1,0 +1,50 @@
+{
+  "name": "SampleCapex",
+  "version": "1.0.0",
+  "description": "Multitenant app using BAS, Productivity tools",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap-cloud-sdk/http-client": "^3.10.0",
+    "@sap-cloud-sdk/util": "^3.10.0",
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/low-code-event-handler": "^1.2.4",
+    "@sap/mdk-tools": "^1.9.0",
+    "@sap/xsenv": "^4.2.0",
+    "@sap/xssec": "^3.6.1",
+    "express": "^4",
+    "hdb": "^0.19.7",
+    "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.1"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-SampleCapex.CapexReport": "cds watch --open SampleCapex.CapexReport/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana"
+      },
+      "app-service": {
+        "impl": "@sap/low-code-event-handler"
+      },
+      "auth": {
+        "kind": "xsuaa"
+      }
+    },
+    "features": {
+      "fetch_csrf": true
+    }
+  },
+  "lcap": true,
+  "sapux": [
+    "app/SampleCapex.CapexReport"
+  ]
+}
