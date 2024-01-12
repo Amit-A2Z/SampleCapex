@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"SampleCapexService","DetailsURL":"./service/SampleCapex/","Metadata":"./service/SampleCapex/$metadata","Entities":[{"Name":"Capex","URL":"./service/SampleCapex/Capex","FioriURL":"$fiori-preview/SampleCapexService/Capex#preview-app"},{"Name":"Contractors","URL":"./service/SampleCapex/Contractors","FioriURL":"$fiori-preview/SampleCapexService/Contractors#preview-app"}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"SampleCapexService","DetailsURL":"/service/SampleCapex/","Metadata":"/service/SampleCapex/$metadata","Entities":[{"Name":"Capex","URL":"/service/SampleCapex/Capex","FioriURL":"$fiori-preview/SampleCapexService/Capex#preview-app"},{"Name":"Contractors","URL":"/service/SampleCapex/Contractors","FioriURL":"$fiori-preview/SampleCapexService/Contractors#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

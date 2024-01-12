@@ -9,22 +9,27 @@ try {
 }
 
 cds.on('served', async () => {
-    const { 'cds.xt.SaasProvisioningService': provisioning } = cds.services;
-    await provisioning.prepend(() => {
-        provisioning.on('dependencies', async (req, next) => {
-            await next();
-            const services = xsenv.getServices({
-                dest: { label: 'destination' }
-            })
-            let dependencies = [
-                {
-                    xsappname: services.dest.xsappname
-                }
-            ]
-            return dependencies;
-        })
-    })
-})
+    try {
 
+        const { 'cds.xt.SaasProvisioningService': provisioning } = cds.services;
+        await provisioning.prepend(() => {
+            provisioning.on('dependencies', async (req, next) => {
+                await next();
+                const services = xsenv.getServices({
+                    dest: { label: 'destination' }
+                })
+                let dependencies = [
+                    {
+                        xsappname: services.dest.xsappname
+                    }
+                ]
+                return dependencies;
+            })
+        });
+    } catch (error) {
+        console.log("ZZ-MTX server.js error occurred and handled in catch block");
+    }
+
+});
 
 module.exports = cds.server;

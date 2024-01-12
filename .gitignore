@@ -8,7 +8,9 @@ default-*.json
 gen/
 node_modules/
 target/
-
+.mta.yaml.*
+@cds-*
+@*
 # Web IDE, App Studio
 .che/
 .gen/
@@ -17,6 +19,7 @@ target/
 *_mta_build_tmp
 *.mtar
 mta_archives/
+mta-op-*
 
 # Other
 .DS_Store
@@ -36,4 +39,5 @@ mta_archives/
 # LCAP
 build/ui-deployer/
 build/dist/
+build/launchpad/
 env/

@@ -21,6 +21,10 @@ File or Folder | Purpose
 - Learn more at https://cap.cloud.sap/docs/get-started/.
 
 
+## Regular commands
+> cf deploy -i 06832465-b089-11ee-a1da-eeee0a9de005 -a abort #To abort the deployment process
+> cf dmol -i 06832465-b089-11ee-a1da-eeee0a9de005 #To download the deployment success, error logs
+> cds add 
 ## Learn More
 
 Both the below links has a bit conflicting information because > cds add multitenancy 
