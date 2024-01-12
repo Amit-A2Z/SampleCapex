@@ -11,10 +11,5 @@
   "attributes": [],
   "role-templates": [],
   "xsappname": "SampleCapex",
-  "tenant-mode": "shared",
-  "oauth2-configuration": {
-    "redirect-uris": [
-      "https://88e6f5c5trial.authentication.us10.hana.ondemand.com/login/callback"
-    ]
-  }
+  "tenant-mode": "dedicated"
 }

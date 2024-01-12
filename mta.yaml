@@ -29,7 +29,7 @@ modules:
     type: nodejs
     path: gen/srv
     parameters:
-      disk-quota: 1028M    
+      disk-quota: 1028M
       memory: 512MB
     provides:
       - name: srv-api
